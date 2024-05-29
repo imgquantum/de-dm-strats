@@ -1,0 +1,21 @@
+dbt_rds_mysql:
+  outputs:
+    dev:
+      type: mysql
+      server: localhost
+      port: 3306
+      database: model_strats
+      username: imartinez
+      password: "{{ env_var('MYSQL_PASSWORD_DEV') }}"
+      threads: 1
+
+    prod:
+      type: mysql
+      server: quantum-db-cluster-prod.cluster-cegv0wkgdkwr.us-east-1.rds.amazonaws.com
+      port: 3306
+      database: model_strats
+      username: imartinez
+      password: "{{ env_var('MYSQL_PASSWORD_PRD') }}"
+      threads: 1
+
+  target: dev

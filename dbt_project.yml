@@ -1,0 +1,8 @@
+name: de_dm_strats
+version: '1.0'
+profile: dbt_rds_mysql
+
+models:
+  de_dm_strats:
+    materialized: table
+    schema: model_strats

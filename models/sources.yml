@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: stg_tape
+    schema: stg_tape
+    tables:
+      - name: tape_general
